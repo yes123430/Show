@@ -1,14 +1,68 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>你好，GitHub</title>
-  </head>
-  <body>
-    <div>
-      <li>按鈕一</li>
-      <li>按鈕二</li>
-      <li>按鈕三</li>
-    </div>
-  </body>
+    <!--解說教學
+        <meta charset="utf-8"> -> 設置這個網頁邊碼格式
+        <title>標題</title> -> 標題與法  
+        <link rel="stylesheet" href="css/main.css"> -> Link連接外部使用、rel=檔案連結關係、href位置
+    -->
+    <head>
+        <link rel="stylesheet" href="css/main.css"> 
+        <meta charset="utf-8"> 
+        <title>標題</title>
+    <head>
+    <!--
+        line-height:50px;　//DIV區塊高度
+        padding:20px;　//DIV區塊內距，參閱：CSS padding 內距。
+        border:2px blue solid;　//DIV區塊邊框，參閱：CSS border 邊框設計。
+        margin-right:10px;　//靠右外距，參閱：CSS margin 邊界使用介紹範例教學。
+    -->
+
+    <body>
+        <div class="menu">
+            <div class="title">
+                <div class="leftImage"></div>                
+                <span class="name"">TedWu</span>               
+            </div>           
+            <ul>
+                <li>關於我</li>
+                <li>Page1</li>
+                <li>Page2</li>
+            </ul>
+            <div class="link">
+                <div class="fb"></div>
+                <div class="github"></div>
+                <div class="twitter"></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="banner">
+                <div class="picture"></div><!--放置圖大頭照的div區塊-->
+                <span>ted<br>簡單練習切版<br>iT鐵人賽持續衝刺中</span>
+            </div>
+            <div class="news">
+                <div>最新文章</div>
+                <ul>
+                    <li>文章1</li>
+                    <li>文章1</li>
+                    <li>文章1</li>
+                    <input type="text"></input>
+                    <button  onclick="btnClick()">確認</button>
+                    <p  id="inText"></p>
+                    <p id="inTextt">9988</p>
+                    <script>
+                    var i =0;
+                    function btnClick()
+                    {
+                        i=i+1;
+                        document.getElementById("inText").innerText=i;
+                    }
+
+                    </script>
+                </ul>
+                <a href="#">more</a>
+            </div>
+            <iframe id="if" src="http:www.copower.com.tw"></iframe>
+        </div>
+
+    </body>
 </html>
