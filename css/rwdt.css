@@ -1,0 +1,129 @@
+/*
+解說:https://developer.mozilla.org/zh-TW/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes
+display: flex; -> 設定彈性盒子
+flex-direction  :屬性啟用主軸。
+justify-content :屬性定義目前彈性項目的主軸如何擺放。
+align-items     :屬性定義目前彈性項目的切軸如何擺放。
+align-self      :屬性定義目前單一彈性項目如何對齊。這個設定會覆蓋 align-items 的預設值。
+
+*/
+body{
+    margin: 0px;
+}
+#mainContainer {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap; 
+}
+#menu{ 
+    background: white;
+    border: 0 0 1 0;
+    width: 100%;
+    margin-bottom: 2px;    
+}
+#menu .menuMark{   
+    float: left; 
+    margin-left: 3px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url("../images/me.jpg") no-repeat;
+    border-radius: 50%;
+    background-size: 50px auto;
+
+    cursor: pointer;
+}
+
+#menu .menuItem ul{
+    float: right;
+    margin: 30px 0 0 0;
+}
+#menu .menuItem li{
+    display: inline;
+    font-size: 1.2em;
+
+    padding: 0px 5px 0px 5px;
+  
+    list-style: none;
+    cursor: pointer;
+}
+
+#menu .menuItem a{
+    color: black;
+    font-weight: bold;
+    text-decoration:none;
+}
+#menu .menuItem a:hover{
+    background: rgb(221, 221, 221);
+    color: rgb(17, 0, 252);
+}
+
+#footContainer{
+    background: black;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap; 
+}
+
+.f1{
+    width: 100%;
+    height: 50px;
+    color: white;
+    text-align: center;
+}
+
+.swiper-container {
+    max-height: 1080px;
+}
+
+.about{
+    box-sizing: border-box;
+    min-height: 250px;
+    width: 100%;
+    padding: 10px;
+}
+
+.c2, .c3, .c4, .c5 {
+    box-sizing: border-box;
+    min-height: 500px;
+    width: 100%;
+    padding: 10px;
+}
+
+.item{
+    border: .3px solid black;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+}
+.item .item-img{
+    width: 100%;
+    height: 400px;
+}
+
+@media (min-width: 600px) {
+    .c2, .c3, .c4, .c5 {
+      width: 50%;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .swiper-container {
+        height: 100px;
+    }  
+}
+
+.navFixed{
+    position: fixed;
+    z-index:9999;
+}
+
+
+
+
+ 
+  
