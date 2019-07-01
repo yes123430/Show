@@ -1,90 +1,31 @@
-@import './reset.css';
+#mainContainer {
+    width: 90%;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px; 
+}
 
-            .menu {
-                height: 100vh; 
-                width: 250px;
-                background-color: #7C7C7C;
-                float: left; /*元素視窗浮動*/
-            }
-            .content {
-                width: 100vw; /* vh是跟著視窗高度，所以vw就是跟著視窗寬度，讓我們右側的內容區塊能視窗寬度做改變 */
-                height: 100vh;
-                background-color: rgb(30, 162, 238);
-            }
-            .title {
-                width: 100%;                    /*這邊的寬度100%是抓menu設定的寬度*/
-                height: 120px;                  /*寫一個適合的高度*/
-                background-color: #4A4A4A;    /*設定底色為#4A4A4A*/
-            }
-            .menu .title .leftImage{
-                background: url('../images/me.jpg') no-repeat; /*url('圖片位置') no-repeat代表這張圖片不重覆*/
-                background-color: white;
-                background-size: 70px auto;
-                height: 70px;
-                width: 70px;
-                border-radius: 50px;
-                float: left;
-                margin: 20px 15px;
-            }
-            .menu .title .name{
-                float: left;
-                margin-top: 40px;
-                font-size: x-large;
-                color: blanchedalmond;
-            }
+#mainContainer .simg {
+    float: left;
+    width: 50px;
+    height: 50px;
+}
 
-            .menu .link{
-                width: 100%;
-                position: absolute;
-                left: 0;
-                bottom: 0;
-            } 
+#mainContainer .cont {
+    margin-left: 50px;
+}
 
-            /*因為三張圖片的顯示範圍以及區塊模式都是一樣的所以統一寫在div標籤上*/
-            .menu .link div {
-                height: 20px;
-                width: 20px;
-                display: inline-block;
-            }
+#navMenu ul li{
+    display: inline;
+    margin: 4px;
+    border: 1px;
+}
 
-            .menu .link .fb {
-                background: url('./images/facebook-logo.png') no-repeat;
-                background-size: auto 20px;
-            } 
 
-            .menu .link .github {
-                background: url('../images/github-logo.png') no-repeat;
-                background-size: 15px auto;
-            }
+@media screen and (max-width: 600px){
+    #mainContainer
+    {
+        background: rgb(173, 28, 28);
+    }
+  }
 
-            .menu .link .twitter {
-                background: url('../images/twitter-logo.png') no-repeat;
-                background-size: 20px auto;
-            } 
-
-            .menu li {
-                font-size: 1.3em;
-                font-weight: 300;
-                padding: 10px 30px;   /**/
-                color: #ffffff;     /*文字顏色*/
-            }
-            .menu li:hover {
-                color: #000000;     /*文字顏色*/
-                background-color: #ffffff;
-                cursor:pointer;
-            }
-
-            .content .banner {
-                width: 100%;                            /*設定寬度為100%*/
-                height: 120px;                          /*設定高度為300px*/
-                background-color: rgb(44, 154, 218);
-            }   
-            .content .news{
-                 background-color: rgb(104, 225, 230);
-            } 
-
-            #if{ 
-                margin-left: 250px;
-                width: 100%;
-
-           } 

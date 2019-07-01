@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale=1.0></meta>
+        <link rel=stylesheet type="text/css" href="css/rwdt.css"></link>
+        <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+        <!-- Swiper v4.5.0 -->
+        <link rel=stylesheet type="text/css" href="css/swiper.css"></link>
+        <link rel=stylesheet type="text/css" href="css/swiper.min.css"></link>
+        <script type="text/javascript" src="js/swiper.js"></script>
+        <script type="text/javascript" src="js/swiper.min.js"></script>
+
+        <title>yes123430</title>
+    </head>
+    <body>
+        <div >
+            <div id="menu">
+                <div class="menuMark"><a href="http://www.copower.com.tw" target="_blank"></a></div>
+                <div class="menuItem">
+                    <ul>
+                        <li><a href="#">首頁</a></li>
+                        <li><a href="#C5">關於我</a></li>
+                        <li><a href="#C5">WPF</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div style="display: inline-flex; width: 90%; padding: 20px;" >
+                        <!-- 幻燈片內容 -->
+                        <div class="swiper-container">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide"><img src="images/wpf3.png" style="max-width: 100%;max-height: 100%;"></div>
+                                    <div class="swiper-slide"><img src="images/wpf1.png" style="max-width: 100%;max-height: 100%;"></div>
+                                    <div class="swiper-slide"><img src="images/wpf2.png" style="max-width: 100%;max-height: 100%;"></div>
+                                </div>
+                                    <!-- If we need pagination -->
+                                    <div class="swiper-pagination"></div>
+                                
+                                    <!-- If we need navigation buttons -->
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                
+                                    <!-- If we need scrollbar -->
+                                    <div class="swiper-scrollbar"></div>
+                            </div>
+        </div>
+
+        <div id="mainContainer">
+            <div ckass="about">
+                
+            </div>
+                <div class="c2">
+                    <div class="item">
+                        <div>
+                            <img class="item-img" src="images/wpf3.png" style="max-width: 100%;max-height: 100%;">
+                        </div>
+                        <div>
+                            WPF介面
+                        </div>
+                    </div>
+                </div>
+                <div class="c3">
+                    <div class="item">
+                            長榮空服員罷工原本昨天有望落幕，但桃園市空服員職業工會與長榮航空昨晚在簽訂新團體協約時觸礁，因資方拒撤回不調薪、不發年終與砍3年優惠機票等，並堅持懲處18名報到後罷飛空服員，勞資協調再度破局，雙方約定7月2日再議，而工會也決定繼續罷工，讓原本暫露曙光的進度，陷入僵局。
+                            長榮表示，18名空服員當中，已經有3名成員拿回三寶，並且已經加入排班行列。另外，工會則指控罷工期間遭記曠職懲處的會員總人數已經來到為25人，除了上述18名空服員外，也有幾名空服員20日執行地面訓練勤務，在下午4時後當面告知主管表示必須去參與罷工行動以及無特殊理由遭記曠職。
+                            長榮航空則回應，這7名空服員是接受地面機型轉換教育課程，在課程進行當中離開參加罷工，的確已經先將他們暫記曠職，將進一步調查後進行懲處。
+                    </div>
+                </div>
+                <div class="c4">
+                    <div class="item"></div>
+                </div>
+                <div class="c5">
+                    <div class="item"></div>
+                </div>
+        </div>
+
+        <div id="footContainer">
+            <div class="f1">Copyright©2018 練習作品</div>
+        </div>
+    </body>
+
+    <script type="text/javascript">
+        $(function () {
+            $(window).scroll(function () {
+                console.log("進入");
+                var scrollVal = $(this).scrollTop();
+                console.log(scrollVal);
+                if(scrollVal >= 50){
+                    $('#menu').addClass('navFixed');
+                } else{
+                    $('#menu').removeClass('navFixed');
+                }
+            });
+        });
+
+
+        var mySwiper = new Swiper ( ".swiper-container", {
+  		    direction: "horizontal", // 方向
+  		    loop: true,  // 循環
+            centeredSlides: true,
+            slidesPerView: 3,
+            spaceBetween: 20,
+  		    pagination: {
+  			    el: ".swiper-pagination",  // 分頁物件
+  		    },
+
+            
+  		    navigation: {
+  			    nextEl: ".swiper-button-next", // 上一頁按鈕物件
+  			    prevEl: ".swiper-button-prev", // 下一頁按鈕物件
+  		    },
+            
+  	    })
+
+
+    </script> 
+
+</html>
