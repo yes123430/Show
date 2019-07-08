@@ -1,2 +1,3 @@
 # Show
-about web test
+* 靜態網頁
+* 學習紀錄
