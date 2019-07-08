@@ -1,68 +1,132 @@
 <!DOCTYPE html>
 <html>
-    <!--解說教學
-        <meta charset="utf-8"> -> 設置這個網頁邊碼格式
-        <title>標題</title> -> 標題與法  
-        <link rel="stylesheet" href="css/main.css"> -> Link連接外部使用、rel=檔案連結關係、href位置
-    -->
     <head>
-        <link rel="stylesheet" href="css/main.css"> 
-        <meta charset="utf-8"> 
-        <title>標題</title>
-    <head>
-    <!--
-        line-height:50px;　//DIV區塊高度
-        padding:20px;　//DIV區塊內距，參閱：CSS padding 內距。
-        border:2px blue solid;　//DIV區塊邊框，參閱：CSS border 邊框設計。
-        margin-right:10px;　//靠右外距，參閱：CSS margin 邊界使用介紹範例教學。
-    -->
+        <!--解說教學
+            <meta charset="utf-8"> -> 設置這個網頁邊碼格式
+            <link rel="stylesheet" href="css/main.css"> -> Link連接外部使用、rel=檔案連結關係、href位置
+        -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>TedWu</title>
+        <link href="css/main.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 
-    <body>
-        <div class="menu">
-            <div class="title">
-                <div class="leftImage"></div>                
-                <span class="name"">TedWu</span>               
-            </div>           
-            <ul>
-                <li>關於我</li>
-                <li>Page1</li>
-                <li>Page2</li>
-            </ul>
-            <div class="link">
-                <div class="fb"></div>
-                <div class="github"></div>
-                <div class="twitter"></div>
-            </div>
-        </div>
-        <div class="content">
-            <div class="banner">
-                <div class="picture"></div><!--放置圖大頭照的div區塊-->
-                <span>ted<br>簡單練習切版<br>iT鐵人賽持續衝刺中</span>
-            </div>
-            <div class="news">
-                <div>最新文章</div>
-                <ul>
-                    <li>文章1</li>
-                    <li>文章1</li>
-                    <li>文章1</li>
-                    <input type="text"></input>
-                    <button  onclick="btnClick()">確認</button>
-                    <p  id="inText"></p>
-                    <p id="inTextt">9988</p>
-                    <script>
-                    var i =0;
-                    function btnClick()
-                    {
-                        i=i+1;
-                        document.getElementById("inText").innerText=i;
+        <script>
+            /*
+            $.ajax({
+                type:'GET',
+                url:'http://localhost:9755/api/values/',
+                success:function(dd){
+                    console.log(dd);
+                }
+            });
+
+            $(document).ready(function(){
+                $('.menu-btn').on('click',function(){
+                    alert('556');
+                })
+            });
+            */
+            /*
+            $(function(){
+                $.ajax({
+                    type:'GET',
+                    url:'https://ruienyuski.github.io/git_test/data.json',
+                    success:function(data){
+                        console.log(data);
+                        console.log(typeof(data));
+                        
+                        var $xmldata= JSON.stringify(data);
+                        console.log($xmldata);
+
+                        for(i=0;i< data.length;i++){
+                            console.log(data[i]);
+                        }
                     }
+                });
+            });
+            */
+        </script>
 
-                    </script>
+    </head>
+    <body>
+        <div id="warrp">
+            <div class="nav">  
+                <div class="logo"><a href="#"></a></div> 
+
+                <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+                <input id="menu-btn" class="menu-btn" type="checkbox"></input> 
+                        
+                <ul class="menu">
+                    <li><a href="#workcontent">關於我</a></li>
+                    <li><a href="#learnContent">自學紀錄</a></li>
                 </ul>
-                <a href="#">more</a>
+                 
             </div>
-            <iframe id="if" src="http:www.copower.com.tw"></iframe>
-        </div>
 
+            <div class="contentTitle">
+                <div class="title">關於我</div>
+            </div>
+
+            <div id="workcontent">
+                <div class="msapplication">
+                            <div class="CardBox">
+                                <h4 style="text-align: center;">使用技能/專長</h4>
+                                <ul>
+                                    <li>C# WinForm/WPF</li>
+                                    <li>SQL、基礎LINQ、Task運用</li>
+                                    <li>RS232(Modbus ASCII通訊)</li>
+                                </ul> 
+                                <h4 style="text-align: center;">工具</h4>
+                                <ul>
+                                    <li>Visual Studio、MSSQL、RDLC(報表)</li>
+                                </ul>                                    
+                            </div>
+                        </div>
+                <div class="msapplication">
+                    <div class="CardBox">
+                            <div class="CardItem-img">
+                                    <img src="images/WPF1.png"></img>
+                                </div>
+                                <div class="CardItem-Title">秤量系統</div>
+                                <div class="CardItem-Content">
+                                    <p>提供染助劑資料建立。</p>
+                                    <p>操作員->掃單->依據燈號顯示->確料後秤料->回傳。</p> 
+                                </div>
+                    </div>
+                </div>
+                <div class="msapplication">
+                    <div class="CardBox">
+                        <div class="CardItem-img">
+                            <img src="images/WPF3.png"></img>
+                        </div>
+                        <div class="CardItem-Title">滴定系統</div>
+                        <div class="CardItem-Content">
+                            <p>三區染料區、中間滴定區、轉盤作業，顯示畫面染料動作狀況。</p>
+                            <p>操作員->讀QRCode工單(JSON)->按下開始滴定->某支完成(回傳客戶API(JSON))->標籤列印。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="msapplication">
+                        <div class="CardBox">
+                            <div class="CardItem-img">
+                                <img src="images/WPF4.png"></img>   
+                            </div>
+                            <div class="CardItem-Title">資料管理員系統</div>
+                            <div class="CardItem-Content">
+                                <p>提供染助劑資料建立。</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="contentTitle"><div class="title">自學紀錄</div></div>
+
+            <div id="learnContent">
+                <a href="#"><img ></a>
+                <a href="#"><img ></a>
+                <a href="#"><img ></a>
+            </div>                
+        </div>
+        <div id="footer"><div>練習紀錄 @ About TedWu</div></div>   
     </body>
 </html>
