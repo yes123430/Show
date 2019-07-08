@@ -1,0 +1,272 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#warrp{
+    min-height: 100%;
+    margin-bottom: -50px;/* 等於footer的高度 */
+    position: relative;
+}
+
+.nav{  
+    overflow: hidden;
+    background:  #F8F9FA;/*#333 ;*/
+}
+
+.logo{
+    float: left;
+    margin-left: 3px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    display: block;
+    width: 45px;
+    height: 45px;
+    background: url(../images/me.jpg) no-repeat;
+    border-radius: 50%;
+    background-size: 100% auto;
+    cursor: pointer;
+}
+
+.menu{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.menu li{
+    display: inline-block;
+    
+    cursor: pointer;
+
+    list-style: none;  
+    font-weight: bold;
+    color: rgba(0,0,0,.5); 
+}
+.menu li:hover{
+    background: cornflowerblue;
+}
+
+.menu li a{
+    text-decoration:none;
+    display: block;
+    padding: 1rem;
+    color: rgba(0,0,0,.5);
+}
+.menu li a:hover{
+    text-decoration:none;
+    color: black;
+}
+
+
+
+
+
+/*  建立漢堡目錄圖案
+    ::before、::after 偽元素 -> 提供前後差異。
+    +(加號) -> p+p，同一層中，p後面的第一個p會套用。
+    ~(波浪號) -> p~p，同一層中，p後面的第一個p會套用。
+*/
+.menu-btn{
+    display: none;
+    
+}
+.menu-icon{
+    display: inline-block;
+    padding: 1.3rem;
+    cursor: pointer;
+}
+.menu-icon .navicon{
+    background: #333;
+    height: 2px;
+    width: 18px;
+    display: block;
+    position: relative;
+    /*transition: background .2s ease-out;*/
+}
+.menu-icon .navicon::before,
+.menu-icon .navicon::after{
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;   
+}
+.menu-icon .navicon:before {
+    top: 5px;
+}
+.menu-icon .navicon::after {
+    top: -5px;
+}
+
+.contentTitle .title{
+    letter-spacing: 2px;
+    padding: 10px;
+    margin-left: 5px;
+    position: relative;
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+}
+.contentTitle .title:before{
+    content: '';
+    background: #4088b5;
+    position: absolute;
+    width: 100%;
+    height: 13px;
+    bottom: 10px;
+    left: 0;
+    z-index: -1;
+}
+
+#workcontent{
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap; 
+}
+
+#workcontent .CardBox{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ddd;
+    padding: .2rem;
+}
+
+.msapplication, .m2, .m3, .m4, .m5{
+    box-sizing: border-box;
+    width: 25%;
+    padding: 10px;
+    min-height: 250px; 
+    background: white;
+}
+
+#workcontent .msapplication{
+    /*background: salmon;*/
+    max-height: 400px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#workcontent .msapplication .CardBox .CardItem-img{
+    width: 100%;
+    height: calc(100% - 100px);
+}
+
+#workcontent .msapplication .CardBox div img{
+    background: white;
+    /*
+    max-width: 100%;
+    max-height: 100%;
+    */
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#workcontent .msapplication .CardBox .CardItem-Title{
+    padding: 5px 0;
+    text-align: center;
+    /*
+    border: .5px solid black;
+    */
+}
+
+#workcontent .msapplication .CardBox p{
+    margin: 0;
+    padding: 0;
+}
+
+#workcontent .CardItem-Content{
+    /*
+    border-top: 0px;
+    border-right: 0.5px;
+    border-bottom: 0.5px;
+    border-left: 0.5px;
+    border-color: black;
+    border-style: solid;
+    */
+}
+
+#learnContent{
+    padding-bottom: 50px; /* 留Footer空間 */
+}
+
+
+#footer{
+    width: 100%;
+    height: 50px;
+    margin-top: -50px;
+    clear: both;
+    text-align: center;
+    background: #4088b5;
+    color: white;
+    position: relative;
+}
+
+#footer div{
+    padding-top: 1rem;
+}
+
+/* 48em = 768px */
+@media (max-width: 860px) {
+    .menu{
+        margin-top: 50px;
+    } 
+    .menu li{
+        display: none;
+    }   
+    .menu-icon{
+        float: right;
+    }
+    .menu-btn:checked ~ .menu li{   
+        transition: all .5s ease-out;     
+        display: block;
+    }
+
+
+    .msapplication, .m2, .m3, .m4{
+        width: 50%;
+    }
+}
+@media (min-width: 860px) {
+    .menu-icon{
+        display: none;
+    }
+
+
+}
+
+@media (max-width: 640px) {
+    .msapplication, .m2, .m3, .m4{
+        width: 100%;
+    }
+}
+
+
+
+
+
+/* 圖片轉換 */
+.coverflow{
+
+    position: relative;
+}
+.coverflow>a{
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    /*當圖片數量增加，影片長度需更改，變為5s圖片數量*/
+    -webkit-animation: silder 15s linear infinite;
+    animation: silder 15s linear infinite;
+}
+.coverflow>a>img{
+    max-width: 100%;
+}
