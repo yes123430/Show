@@ -11,6 +11,14 @@
         <link href="css/main.css" rel="stylesheet" type="text/css">
         <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.x.x/css/swiper.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.x.x/css/swiper.min.css">
+
+        <script type="text/javascript" src="js/swiper.js"></script>
+        <script type="text/javascript" src="js/swiper.min.js"></script>
+
         <script>
             /*
             $.ajax({
@@ -46,6 +54,26 @@
                 });
             });
             */
+            $(document).ready(function(){
+                var mySwiper = new Swiper ('.swiper-container', {
+                    // Optional parameters
+                    direction: 'horizontal',
+                    loop: true,
+                    // If we need pagination
+                    pagination: {
+                        el: '.swiper-pagination',
+                    },
+                    // Navigation arrows
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    // And if we need scrollbar
+                    scrollbar: {
+                        el: '.swiper-scrollbar',
+                    },
+                });
+            });
         </script>
 
     </head>
@@ -64,9 +92,7 @@
                  
             </div>
 
-            <div class="contentTitle">
-                <div class="title">關於我</div>
-            </div>
+            <div class="contentTitle"><div class="title">關於我</div></div>
 
             <div id="workcontent">
                 <div class="msapplication">
@@ -74,7 +100,7 @@
                                 <h4 style="text-align: center;">使用技能/專長</h4>
                                 <ul>
                                     <li>C# WinForm/WPF</li>
-                                    <li>SQL、基礎LINQ、Task運用</li>
+                                    <li>ADO.NET、SQL、基礎LINQ、Task運用</li>
                                     <li>RS232(Modbus ASCII通訊)</li>
                                 </ul> 
                                 <h4 style="text-align: center;">工具</h4>
@@ -119,14 +145,66 @@
                         </div>
                     </div>
             </div>
+
             <div class="contentTitle"><div class="title">自學紀錄</div></div>
 
             <div id="learnContent">
-                <a href="#"><img ></a>
-                <a href="#"><img ></a>
-                <a href="#"><img ></a>
-            </div>                
+                <div class="learnApplication">
+                    <div class="CardBox">
+                        <h4 style="text-align: center;">目前進度(6月中開始學習)</h4>
+                        <lu>
+                            <li>HTML：基礎語法瞭解</li>
+                            <li>JavaScript、jQuery：瞭解一些Function()、JS AJAX(get,post)運用</li>
+                            <li>CSS(參考w3school)：簡單運用、瞭解盒子模型</li>
+                            <li>ASP.net MVC(參考書ASP.NetMVC5網站開發美學)：建立簡單後台練習專案、CRUD功能、ajax(post,get)、EF CodeFirst</li>
+                        </lu>
+                        <h4 style="text-align: center;">進行中/未來計畫</h4>
+                        <ol>
+                            <P>希望可以找到相關技術工作，工作前完成基本觀念與作品</P>
+                            <li>練習切版、CSS(偽元素、輪播、不同導覽列)</li>
+                            <li>練習WebAPI、購物網範例</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="learnApplication">
+                    <div class="CardBox">
+                            <div class="CardItem-img">
+                                <img src="images/ProdBE1.png"></img>
+                            </div>
+                            <div class="CardItem-Content">
+                                <p>目前使用：MSSQL、EF First、CRUD功能、JQ AJAX post實作、session登入</p>
+                                <p>預計測試瞭解：上傳圖片、model驗證、互動視窗、下拉選單</p>                                
+                            </div>
+
+                        <script>
+                            /* swiper測試
+                                                    <div class="swiper-container">
+                                    <!-- Additional required wrapper -->
+                                    <div class="swiper-wrapper">
+                                        <!-- Slides -->
+                                        <div class="swiper-slide"><img src="images/WPF1.png" style="max-width: 100%"></div>
+                                        <div class="swiper-slide">Slide 2</div>
+                                        <div class="swiper-slide">Slide 3</div>
+                                        ...
+                                    </div>
+                                    <!-- If we need pagination -->
+                                    <div class="swiper-pagination"></div>
+                                
+                                    <!-- If we need navigation buttons -->
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                
+                                    <!-- If we need scrollbar -->
+                                    <div class="swiper-scrollbar"></div>
+                            </div>
+                            */
+                        </script>
+    
+                    </div>
+                </div> 
+            </div>             
         </div>
+
         <div id="footer"><div>練習紀錄 @ About TedWu</div></div>   
     </body>
 </html>
