@@ -60,9 +60,6 @@ html,body{
 }
 
 
-
-
-
 /*  建立漢堡目錄圖案
     ::before、::after 偽元素 -> 提供前後差異。
     +(加號) -> p+p，同一層中，p後面的第一個p會套用。
@@ -193,9 +190,27 @@ html,body{
 }
 
 #learnContent{
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap; 
     padding-bottom: 50px; /* 留Footer空間 */
 }
 
+#learnContent .learnApplication{
+    box-sizing: border-box;
+    width: 50%;
+    padding: .5rem;
+}
+
+#learnContent .learnApplication .CardBox{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ddd;
+}
+
+#learnContent .learnApplication .CardBox li{
+    padding-left: 1rem;
+}
 
 #footer{
     width: 100%;
@@ -231,6 +246,10 @@ html,body{
 
     .msapplication, .m2, .m3, .m4{
         width: 50%;
+    }
+
+    #learnContent .learnApplication {
+        width: 100%;
     }
 }
 @media (min-width: 860px) {
