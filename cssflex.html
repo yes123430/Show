@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>cssgrid</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript">
+            document.querySelector('#container').innerHTML;             /*get*/
+            document.querySelector('#container').innerHTML = "給值";    /*set*/
+        </script>
+        <style>
+            html{
+                padding: 0 10rem;
+                position: relative;
+            }
+
+            body{
+                margin: 0;
+                padding: 0;
+            }
+
+            #btnMenu{
+                float: left;
+                display: none;
+
+                margin: 1rem; 
+            }
+            #btnMenu button{
+                cursor: pointer;
+            }
+
+            nav {
+                overflow: hidden;
+            }
+
+            #logo{
+                float: left;
+                margin: 1rem;  
+            }
+
+            nav ul{
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                list-style: none;
+            }
+            nav ul:after{
+                content: '';
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                background: black;
+                text-align: center;
+                list-style: none;
+            }
+
+            nav ul li{
+                display: inline-block;
+                padding: 20px;
+                margin: 0;
+
+
+                cursor: pointer;
+            }
+            nav ul li a{
+                color: #666;
+            }
+            nav ul li a:hover{
+                color: black;
+            }
+
+
+            .mainPanel{
+                box-sizing: border-box;
+                width: 100%;
+            }
+            
+            .mainPanel-img{
+                width: 100%;
+                max-height: 100%;
+            }
+
+            .contaier{
+                display: flex;
+                flex-wrap: wrap;
+                margin-right: -5px;
+                margin-left: -5px;
+            }
+            .contaier .contaierBox{
+                display: block;
+                width: 25%;
+            }
+            .contaier .contaierBox div{
+                margin: 5px;
+            }
+
+            .contaier .contaierBox img{
+                max-width: 100%;
+                max-height: 100%;
+                cursor: pointer;
+            }
+
+            footer{
+                padding: 1rem 0;
+                background: black;
+                color: white;
+                bottom: 0;
+                text-align: center;
+            }
+            
+            footer a{
+                color: white;
+            }
+
+            @media screen and (max-width: 1280px){
+                nav{
+                    height: 50px;
+                }
+                #btnMenu{
+                    display: block;
+                }
+                #logo{
+                    float: none;
+                    text-align: center;
+                }
+                nav ul li{
+                    display: block;
+                }
+
+                .contaier .contaierBox{
+                    width: 50%;
+                }
+            }
+            @media screen and (max-width: 840px){
+                .contaier .contaierBox{
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <nav>
+                <div id="btnMenu">
+                    <button>≡</button>
+                </div>
+                <div id="logo">
+                    <a href="#"><img src="https://img.muji.net/img/common/logo-muji.svg"></img></a>
+                </div>
+                
+                <ul>
+                    <li class="btnLink"><a>商品情報</a></li>
+                    <li><a>門市活動</a></li>
+                    <li><a>良品生活研究所</a></li>
+                    <li><a>會員專區</a></li>
+                </ul>
+            </div>
+            <div class="mainPanel">
+                <a><img class="mainPanel-img" src="https://www.muji.com/tw/img/panel/main/1024X640-190709.jpg"></a>
+            </div>
+            <div class="contaier">
+                <!--
+                <div class="contaierBox"><img src="https://www.muji.com/tw/img/panel/181122_licture640.jpg"></div>
+                <div class="contaierBox"><img src="https://www.muji.com/tw/img/panel/640X400-sale-190709.jpg"></div>
+                <div class="contaierBox"><img src="https://www.muji.com/tw/img/panel/640X400-190617-pen.jpg"></div>
+                <div class="contaierBox"><img src="https://www.muji.com/tw/img/panel/640X400-509.jpg"></div>
+                -->
+                <div class="contaierBox"><div><img src="https://www.muji.com/tw/img/panel/181122_licture640.jpg"></div></div>
+                <div class="contaierBox"><div><img src="https://www.muji.com/tw/img/panel/640X400-sale-190709.jpg"></div></div>
+                <div class="contaierBox"><div><img src="https://www.muji.com/tw/img/panel/640X400-190617-pen.jpg"></div></div>
+                <div class="contaierBox"><div><img src="https://www.muji.com/tw/img/panel/640X400-509.jpg"></div></div>
+            </div>
+            <div class="contaier">
+                <!--
+                    <div class="contaierBox"><img src="https://www.muji.com/tw/img/panel/640X400-ban-620.jpg"></div>
+                    <div class="contaierBox"><img src="https://www.muji.com/tw/img/panel/easa/sa-2019.jpg"></div>
+                    <div class="contaierBox"><img src="https://www.muji.com/tw/img/panel/easa/ea-2019.jpg"></div>
+                    <div class="contaierBox"><img src="https://www.muji.com/tw/img/panel/business.jpg"></div>
+                -->
+                <div class="contaierBox"><div><img src="https://www.muji.com/tw/img/panel/640X400-ban-620.jpg"></div></div>
+                <div class="contaierBox"><div><img src="https://www.muji.com/tw/img/panel/easa/sa-2019.jpg"></div></div>
+                <div class="contaierBox"><div><img src="https://www.muji.com/tw/img/panel/easa/ea-2019.jpg"></div></div>
+                <div class="contaierBox"><div><img src="https://www.muji.com/tw/img/panel/business.jpg"></div></div>
+            
+            
+            </div>
+            <div style="text-align: right;"><a href="#" style="text-decoration: none;">活動特級 ></a> </div>
+            
+            <footer>
+                練習學習用，圖片、資料來至官網 : <a href="https://www.muji.com/tw/">https://www.muji.com/tw/</a> 
+            </footer>
+        </div>
+    </body>
+</html>
