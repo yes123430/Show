@@ -224,6 +224,27 @@ html,body{
     padding-left: 1rem;
 }
 
+#learnContent .Container{
+    display: flex;
+    flex-flow: row wrap; 
+}
+
+#learnContent .Container h6{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: center;
+}
+#learnContent .Container .Box{
+    width: 33%; 
+}
+#learnContent .Container .Box ul{
+    padding-left: 20px;
+}
+#learnContent .Container .Box li{
+    padding-left: 0;
+}
+
 #footer{
     width: 100%;
     height: 50px;
