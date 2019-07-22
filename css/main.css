@@ -1,3 +1,11 @@
+/*
+flex排版註解
+父div -> 必須設定 display:flex
+    資料流的走向(起始位置)    justify-content: 有這三項 flex-start,center.flex-end;
+    資料流的間距(每個區間)    justify-content: space-around,space-between;
+    
+*/
+
 html,body{
     margin: 0;
     padding: 0;
