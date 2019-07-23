@@ -2,18 +2,18 @@
 * 靜態網頁
 * 學習紀錄
 
-** SQL --
+## -- SQL --
 1. T-SQL
 
-** -- ASP .NET MVC 練習紀錄 --
+## -- ASP .NET MVC 練習紀錄 --
 1. CRUD
 2. EF
 3. 傳輸物件: session、Cookie、ViewBage.XXX = Value、TempData["Key"] = value、ValueDaa
 4. 基礎Bootstrap
 5. 分頁(PagedList.Mvc)
 
-** -- Javastricp --
+## -- Javastricp --
 1. document.querySelector('XXXX')
 
-** -- CSS --
+## -- CSS --
 1. Flex切版觀念
