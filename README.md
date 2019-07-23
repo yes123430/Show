@@ -2,8 +2,8 @@
 * 靜態網頁
 * 學習紀錄
 
-** -- SQL --
-1. T-SQL(還未練習)
+** SQL --
+1. T-SQL
 
 ** -- ASP .NET MVC 練習紀錄 --
 1. CRUD
