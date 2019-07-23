@@ -1,6 +1,6 @@
 # Show
 * 靜態網頁
-* 學習紀錄
+* 學習紀錄 : <a href="https://yes123430.github.io/Show/">DEMO</>
 
 ## -- SQL --
 1. T-SQL
